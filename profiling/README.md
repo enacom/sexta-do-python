@@ -7,3 +7,4 @@
 ## Installation Profiling and cProfiling
 
 ## Installation snakeviz 
+pip install snakeviz
