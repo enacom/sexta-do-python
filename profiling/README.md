@@ -5,6 +5,11 @@
 ## Introduction 
 
 ## Installation Profiling and cProfiling
+```
+pip install profiling
+```
 
 ## Installation snakeviz 
+```
 pip install snakeviz
+```
