@@ -20,7 +20,7 @@ def calc_commission_rate(x):
 
 avg = 1
 std_dev = .1
-num_reps = 10
+num_reps = 10  # número de funcionários
 num_simulations = 10
 
 pct_to_target = np.random.normal(avg, std_dev, num_reps).round(2)
