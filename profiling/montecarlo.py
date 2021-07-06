@@ -18,13 +18,19 @@ def calc_commission_rate(x):
     else:
         return .04
 
+
+def monte_carlo():
+    pass
+
 avg = 1
 std_dev = .1
 num_reps = 10  # número de funcionários
 num_simulations = 10
 
+## Porcentagem de venda dos vendedores
 pct_to_target = np.random.normal(avg, std_dev, num_reps).round(2)
 
+# Distribuição dos valores de vendas
 sales_target_values = [75_000, 100_000, 200_000, 300_000, 400_000, 500_000]
 sales_target_prob = [.3, .3, .2, .1, .05, .05]
 sales_target = np.random.choice(sales_target_values, num_reps, p=sales_target_prob)
@@ -32,9 +38,6 @@ sales_target = np.random.choice(sales_target_values, num_reps, p=sales_target_pr
 df = pd.DataFrame(index=range(num_reps), data={'Pct_To_Target': pct_to_target,
                                                'Sales_Target': sales_target})
 
-df['Sales'] = df['Pct_To_Target'] * df['Sales_Target']
-df['Commission_Rate'] = df['Pct_To_Target'].apply(calc_commission_rate)
-df['Commission_Amount'] = df['Commission_Rate'] * df['Sales']
 
 # Define a list to keep all the results from each simulation that we want to analyze
 all_stats = []
@@ -58,12 +61,11 @@ for i in range(num_simulations):
     df['Commission_Amount'] = df['Commission_Rate'] * df['Sales']
 
     # We want to track sales,commission amounts and sales targets over all the simulations
-    all_stats.append([df['Sales'].sum().round(0),
-                      df['Commission_Amount'].sum().round(0),
-                      df['Sales_Target'].sum().round(0)])
+    all_stats.append([df['Sales'].round(0),
+                      df['Commission_Amount'].round(0),
+                      df['Sales_Target'].round(0)])
 
 results_df = pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                            'Commission_Amount',
                                                            'Sales_Target'])
-results_df.describe().style.format('{:,}')
 print(results_df)
