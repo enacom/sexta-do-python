@@ -4,7 +4,7 @@
 
 ## Introduction 
 
-## Installation Profiling and cProfiling
+## Installation Profiling
 ```
 pip install profiling
 ```
