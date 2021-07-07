@@ -3,32 +3,58 @@
 """
 import pandas as pd
 import numpy as np
+from tqdm import tqdm
 
 
 class Company:
+    """
+
+    """
 
     def __init__(self, num_representatives, range_and_commission_rate):
+        """
+
+        Args:
+            num_representatives:
+            range_and_commission_rate:
+        """
         self.num_representatives = num_representatives
         self.range_and_commission_rate = range_and_commission_rate
 
     def calc_commission_rate(self, sale_percentage):
         """
 
-        :param sale_percentage:
-        :return:
+        Args:
+            range_and_commission_rate:
+            sale_percentage:
+
+        Returns:
+
         """
         for limit, rate in self.range_and_commission_rate:
             if sale_percentage <= limit:
-                return rate/100
+                return rate / 100
 
     def calc_sales(self, sales_target_values, sales_target_prob,
                    average_percentage_to_target,
                    standard_deviation_percentage_to_target,
                    num_simulations=50):
 
+        """
+
+        Args:
+            sales_target_values:
+            sales_target_prob:
+            average_percentage_to_target:
+            standard_deviation_percentage_to_target:
+            num_simulations:
+
+        Returns:
+
+        """
         all_stats = []
 
-        for i in range(num_simulations):
+        for i in tqdm(range(num_simulations)):
             # Choose random inputs for the sales targets and percent to target
             sales_target = np.random.choice(sales_target_values, self.num_representatives, p=sales_target_prob)
             pct_to_target = np.random.normal(average_percentage_to_target,

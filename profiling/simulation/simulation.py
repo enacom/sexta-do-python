@@ -1,5 +1,4 @@
-from profiling.company import Company
-
+from profiling.company.company import Company
 Enacom = Company(num_representatives=500,
                  range_and_commission_rate=[(0.9, 2), (.99, 3), (1, 4)])
 
@@ -9,5 +8,4 @@ sales = Enacom.calc_sales(sales_target_values=sales_target_values,
                           sales_target_prob=sales_target_prob,
                           average_percentage_to_target=1,
                           standard_deviation_percentage_to_target=0.1,
-                          num_simulations=10000)
-print(sales)
+                          num_simulations=2000)
