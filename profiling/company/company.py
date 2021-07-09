@@ -25,7 +25,6 @@ class Company:
         """
 
         Args:
-            range_and_commission_rate:
             sale_percentage:
 
         Returns:
@@ -173,3 +172,4 @@ class Company:
         return pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                              'Commission_Amount',
                                                              'Sales_Target'])
+
