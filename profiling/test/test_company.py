@@ -16,11 +16,11 @@ def enacom():
 
     sales_target_values = [100_000]
     sales_target_prob = [1]
-    sales = Enacom.calc_sales(sales_target_values=sales_target_values,
-                              sales_target_prob=sales_target_prob,
-                              average_percentage_to_target=1,
-                              standard_deviation_percentage_to_target=0.,
-                              num_simulations=2000)
+    sales = Enacom.calc_sales_2(sales_target_values=sales_target_values,
+                                sales_target_prob=sales_target_prob,
+                                average_percentage_to_target=1,
+                                standard_deviation_percentage_to_target=0.,
+                                num_simulations=2000)
     return sales
 
 
@@ -29,7 +29,7 @@ def test_sales(enacom):
 
 
 def test_commission_amount(enacom):
-    assert enacom["Commission_Amount"].mean() == 0.04*100000
+    assert enacom["Commission_Amount"].mean() == 0.04 * 100000
 
 
 def test_sales_target(enacom):
