@@ -79,9 +79,9 @@ class Company:
                 df1.loc[j] = [commission_rate, commission_amount]
             df = pd.concat([df, df1], axis=1)
             # We want to track sales,commission amounts and sales targets over all the simulations
-            all_stats.append([df['Sales'].mean().round(0),
-                              df['Commission_Amount'].mean().round(0),
-                              df['Sales_Target'].mean().round(0)])
+            all_stats.append([df['Sales'].sum().round(0),
+                              df['Commission_Amount'].sum().round(0),
+                              df['Sales_Target'].sum().round(0)])
 
         return pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                              'Commission_Amount',
@@ -125,9 +125,9 @@ class Company:
             df['Commission_Amount'] = df['Commission_Rate'] * df['Sales']
 
             # We want to track sales,commission amounts and sales targets over all the simulations
-            all_stats.append([df['Sales'].mean().round(0),
-                              df['Commission_Amount'].mean().round(0),
-                              df['Sales_Target'].mean().round(0)])
+            all_stats.append([df['Sales'].sum().round(0),
+                              df['Commission_Amount'].sum().round(0),
+                              df['Sales_Target'].sum().round(0)])
 
         return pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                              'Commission_Amount',
@@ -167,7 +167,7 @@ class Company:
             commission_amount = commission_rate * sales
 
             # We want to track sales,commission amounts and sales targets over all the simulations
-            all_stats[i, :] = [sales.mean(), commission_amount.mean(), sales_target.mean()]
+            all_stats[i, :] = [sales.sum(), commission_amount.sum(), sales_target.sum()]
 
         return pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                              'Commission_Amount',
