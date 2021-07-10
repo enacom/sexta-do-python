@@ -13,3 +13,15 @@ pip install profiling
 ```
 pip install snakeviz
 ```
+
+# Profile Example
+
+objective of the example: show profiling examples of how to use profiling
+
+
+Inputs:
+
+    
+Outputs:
+
+   
