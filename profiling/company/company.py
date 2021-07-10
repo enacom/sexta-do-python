@@ -1,5 +1,5 @@
 """
-
+Company Class
 """
 import pandas as pd
 import numpy as np
@@ -8,35 +8,38 @@ from tqdm import tqdm
 
 class Company:
     """
-
+    Company Class
     """
 
     def __init__(self, num_representatives, range_and_commission_rate):
         """
+        Create a company with a certain number of employees and fixed commission rates.
 
         Args:
-            num_representatives:
-            range_and_commission_rate:
+            num_representatives: (int) number of company representatives.
+            range_and_commission_rate: (list) list of tuples with ranges and commission values respectively.
         """
         self.num_representatives = num_representatives
         self.range_and_commission_rate = range_and_commission_rate
 
     def calc_commission_rate(self, sale_percentage):
         """
+        This function returns the commission rate the employee
+        will earn based on their sales percentage.
 
         Args:
-            sale_percentage:
+            sale_percentage: (float) sales percentage of a representatives.
 
         Returns:
-
+            rate: (float) commission rate.
         """
-        for limit, rate in self.range_and_commission_rate:
-            if limit <= sale_percentage:
-                percentage_rate = rate / 100
+        for limit, percentage_rate in self.range_and_commission_rate:
+            if limit < sale_percentage:
+                rate = percentage_rate / 100
             else:
-                percentage_rate = rate / 100
+                rate = percentage_rate / 100
                 break
-        return percentage_rate
+        return rate
 
     def calc_sales(self, sales_target_values, sales_target_prob,
                    average_percentage_to_target,
