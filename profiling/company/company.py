@@ -41,10 +41,10 @@ class Company:
                 break
         return rate
 
-    def calc_sales(self, sales_target_values, sales_target_prob,
-                   average_percentage_to_target,
-                   standard_deviation_percentage_to_target,
-                   num_simulations=50):
+    def financial_projections(self, sales_target_values, sales_target_prob,
+                              average_percentage_to_target,
+                              standard_deviation_percentage_to_target,
+                              num_simulations=50):
 
         """
 
@@ -90,10 +90,10 @@ class Company:
                                                              'Commission_Amount',
                                                              'Sales_Target'])
 
-    def calc_sales_1(self, sales_target_values, sales_target_prob,
-                     average_percentage_to_target,
-                     standard_deviation_percentage_to_target,
-                     num_simulations=50):
+    def financial_projections_1(self, sales_target_values, sales_target_prob,
+                                average_percentage_to_target,
+                                standard_deviation_percentage_to_target,
+                                num_simulations=50):
 
         """
 
@@ -136,10 +136,10 @@ class Company:
                                                              'Commission_Amount',
                                                              'Sales_Target'])
 
-    def calc_sales_2(self, sales_target_values, sales_target_prob,
-                     average_percentage_to_target,
-                     standard_deviation_percentage_to_target,
-                     num_simulations=50):
+    def financial_projections_2(self, sales_target_values, sales_target_prob,
+                                average_percentage_to_target,
+                                standard_deviation_percentage_to_target,
+                                num_simulations=50):
 
         """
 
