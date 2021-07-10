@@ -41,4 +41,13 @@ Inputs:
     
 Outputs:
 
-   
+# Run Profiling in Code
+
+```
+import cProfile 
+cProfile.run('company.financial_projections_1(sales_target_values=sales_target_values,\
+                          sales_target_prob=sales_target_prob,\
+                          average_percentage_to_target=average_percentage_to_target,\
+                          standard_deviation_percentage_to_target=standard_deviation_percentage_to_target,\
+                          num_simulations=num_simulations))')
+```
