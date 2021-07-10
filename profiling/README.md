@@ -30,11 +30,12 @@ Regra: atendimento da tabela regressiva. Aliquota aplicada sobre o lucro
 
 Commission Amount = Actual Sales * Commission Rate
 
-| Rate Schedule               |
-|---------------|-------------|
-| <= 90%        | 2%          |
-| >90 && <100   | 3%          |
-| >= 100%       | 4%          |
+| Percentage Sale | Comsission Rate |
+|-----------------|-----------------|
+| <= 90%          | 2%              |
+| >90 && <=99     | 3%              |
+| >= 100%         | 4%              |
+
 Inputs:
 
     
