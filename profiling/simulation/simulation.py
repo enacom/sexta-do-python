@@ -1,3 +1,6 @@
+"""
+Simulation
+"""
 from profiling.company.company import Company
 
 Enacom = Company(num_representatives=500,
