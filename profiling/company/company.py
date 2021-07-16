@@ -47,15 +47,16 @@ class Company:
                               num_simulations=50):
 
         """
-
+         Creates financial projection for total comission, total sales and total sales target for the company.
         Args:
-            sales_target_values:
-            sales_target_prob:
-            average_percentage_to_target:
-            standard_deviation_percentage_to_target:
-            num_simulations:
+            sales_target_values: (list)  List of target sales values.
+            sales_target_prob: (list) List with distribution of target sales values.
+            average_percentage_to_target: (float) Avarage value of sales percentage to the representatives.
+            standard_deviation_percentage_to_target: (float) Standard deviation of sales percentage to the repreentatives.
+            num_simulations: Number of simulation tests.
 
         Returns:
+            projections: (Dataframe) Dataframe with total comission, total sales and total sales target.
 
         """
         all_stats = []
@@ -99,15 +100,16 @@ class Company:
                                 num_simulations=50):
 
         """
-
+         Creates financial projection for total comission, total sales and total sales target for the company.
         Args:
-            sales_target_values:
-            sales_target_prob:
-            average_percentage_to_target:
-            standard_deviation_percentage_to_target:
-            num_simulations:
+            sales_target_values: (list)  List of target sales values.
+            sales_target_prob: (list) List with distribution of target sales values.
+            average_percentage_to_target: (float) Avarage value of sales percentage to the representatives.
+            standard_deviation_percentage_to_target: (float) Standard deviation of sales percentage to the repreentatives.
+            num_simulations: Number of simulation tests.
 
         Returns:
+            projections: (Dataframe) Dataframe with total comission, total sales and total sales target.
 
         """
         all_stats = []
@@ -148,15 +150,16 @@ class Company:
                                 num_simulations=50):
 
         """
-
+         Creates financial projection for total comission, total sales and total sales target for the company.
         Args:
-            sales_target_values:
-            sales_target_prob:
-            average_percentage_to_target:
-            standard_deviation_percentage_to_target:
-            num_simulations:
+            sales_target_values: (list)  List of target sales values.
+            sales_target_prob: (list) List with distribution of target sales values.
+            average_percentage_to_target: (float) Avarage value of sales percentage to the representatives.
+            standard_deviation_percentage_to_target: (float) Standard deviation of sales percentage to the repreentatives.
+            num_simulations: Number of simulation tests.
 
         Returns:
+            projections: (Dataframe) Dataframe with total comission, total sales and total sales target.
 
         """
         all_stats = np.zeros((num_simulations, 3))
