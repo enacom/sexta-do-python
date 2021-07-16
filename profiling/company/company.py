@@ -62,14 +62,17 @@ class Company:
 
         for i in tqdm(range(num_simulations)):
             # Choose random inputs for the sales targets and percent to target
-            sales_target = np.random.choice(sales_target_values, self.num_representatives, p=sales_target_prob)
+            sales_target = np.random.choice(sales_target_values,
+                                            self.num_representatives,
+                                            p=sales_target_prob)
             pct_to_target = np.random.normal(average_percentage_to_target,
                                              standard_deviation_percentage_to_target,
                                              self.num_representatives).round(2)
 
             # Build the dataframe based on the inputs and number of reps
-            df = pd.DataFrame(index=range(self.num_representatives), data={'Pct_To_Target': pct_to_target,
-                                                                           'Sales_Target': sales_target})
+            df = pd.DataFrame(index=range(self.num_representatives),
+                              data={'Pct_To_Target': pct_to_target,
+                                    'Sales_Target': sales_target})
 
             # Back into the sales number using the percent to target rate
             df['Sales'] = df['Pct_To_Target'] * df['Sales_Target']
@@ -111,14 +114,17 @@ class Company:
 
         for i in tqdm(range(num_simulations)):
             # Choose random inputs for the sales targets and percent to target
-            sales_target = np.random.choice(sales_target_values, self.num_representatives, p=sales_target_prob)
+            sales_target = np.random.choice(sales_target_values,
+                                            self.num_representatives,
+                                            p=sales_target_prob)
             pct_to_target = np.random.normal(average_percentage_to_target,
                                              standard_deviation_percentage_to_target,
                                              self.num_representatives).round(2)
 
             # Build the dataframe based on the inputs and number of reps
-            df = pd.DataFrame(index=range(self.num_representatives), data={'Pct_To_Target': pct_to_target,
-                                                                           'Sales_Target': sales_target})
+            df = pd.DataFrame(index=range(self.num_representatives),
+                              data={'Pct_To_Target': pct_to_target,
+                                    'Sales_Target': sales_target})
 
             # Back into the sales number using the percent to target rate
             df['Sales'] = df['Pct_To_Target'] * df['Sales_Target']
@@ -157,13 +163,15 @@ class Company:
 
         for i in tqdm(range(num_simulations)):
             # Choose random inputs for the sales targets and percent to target
-            sales_target = np.random.choice(sales_target_values, self.num_representatives, p=sales_target_prob)
+            sales_target = np.random.choice(sales_target_values,
+                                            self.num_representatives,
+                                            p=sales_target_prob)
             pct_to_target = np.random.normal(average_percentage_to_target,
                                              standard_deviation_percentage_to_target,
                                              self.num_representatives).round(2)
 
             # Build the dataframe based on the inputs and number of reps
-            sales = sales_target*pct_to_target
+            sales = sales_target * pct_to_target
 
             # Determine the commissions rate and calculate it
             commission_rate = np.array([self.calc_commission_rate(xi) for xi in pct_to_target])
@@ -175,4 +183,3 @@ class Company:
         return pd.DataFrame.from_records(all_stats, columns=['Sales',
                                                              'Commission_Amount',
                                                              'Sales_Target'])
-
