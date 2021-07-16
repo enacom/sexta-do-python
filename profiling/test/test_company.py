@@ -16,14 +16,6 @@ Enacom = Company(num_representatives=10,
                                     Enacom.financial_projections_1,
                                     Enacom.financial_projections_2])
 def test_financial_projections_100(method):
-    """
-
-    Args:
-        method:
-
-    Returns:
-
-    """
     sales_target_values = [10_000]
     sales_target_prob = [1]
     sales = method(sales_target_values=sales_target_values,
