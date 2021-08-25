@@ -1,0 +1,17 @@
+{
+  "scenarioId": "sextaOfPython",
+  "content": {
+    "people": [
+      {
+        "name": "Wenderson",
+        "money": 100,
+        "unit": "bitcoin"
+      },
+      {
+        "name": "Feres",
+        "money": 100,
+        "unit": "brazilian_real"
+      }
+    ]
+  }
+}
