@@ -1,0 +1,13 @@
+{
+  "name": "Gustavo",
+  "email": "gustavo@enacom.com.br",
+  "birth_date": "2001-01-01",
+  "favorite_movies": [
+    {
+      "title": "Pelé",
+      "year_of_release": 2021,
+      "rating": "G",
+      "box_office": "-"
+    }
+  ]
+}
