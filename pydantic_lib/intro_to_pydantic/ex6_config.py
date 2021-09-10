@@ -1,4 +1,5 @@
-"""An internal config class can customize the way data is to be loaded"""
+"""An internal config class can customize the way data is to be loaded -
+https://pydantic-docs.helpmanual.io/usage/model_config/"""
 from pydantic.main import BaseModel
 
 from pydantic_lib.utils import snake_to_camel
