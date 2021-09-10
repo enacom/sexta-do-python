@@ -1,1 +1,1 @@
-from .utils import RatingEnum, Movie, User
+from .utils import RatingEnum, Movie, User, snake_to_camel
