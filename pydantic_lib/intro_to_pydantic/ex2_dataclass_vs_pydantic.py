@@ -1,5 +1,5 @@
 """
-Python dataclasses do NOT validate type, whereas a pydantic base model does
+Python dataclasses do NOT validate type, whereas a pydantic BaseModel does
 """
 
 from dataclasses import dataclass
